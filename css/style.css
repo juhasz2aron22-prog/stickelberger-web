@@ -110,24 +110,23 @@ em { font-style: normal; color: var(--c-warm); }
 /* ---- BUTTONS ---------------------------------------------------------- */
 .btn {
   --b: var(--c-ink);
-  display: inline-flex; align-items: center; gap: 0.7em;
-  padding: 1.05em 1.8em; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 0.55em;
+  padding: 0.92em 1.7em; white-space: nowrap;
   font-size: var(--step--1); font-weight: 600;
-  letter-spacing: 0.06em; text-transform: uppercase;
-  border: 1px solid var(--b); border-radius: var(--radius);
-  background: var(--b); color: var(--c-bg);
-  position: relative; overflow: hidden; isolation: isolate;
-  transition: color 0.4s var(--ease);
+  letter-spacing: 0.01em;
+  border: 1.5px solid var(--b); border-radius: 100px;
+  background: var(--b); color: #fff;
+  transition: background 0.35s var(--ease), border-color 0.35s var(--ease),
+              color 0.35s var(--ease), transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
 }
-.btn::after {
-  content: ""; position: absolute; inset: 0; z-index: -1;
-  background: var(--c-warm);
-  transform: translateY(101%); transition: transform 0.45s var(--ease);
+.btn:hover {
+  background: var(--c-warm); border-color: var(--c-warm); color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -14px color-mix(in srgb, var(--c-warm) 65%, transparent);
 }
-.btn:hover::after { transform: translateY(0); }
-.btn--ghost { background: transparent; color: var(--c-ink); }
-.btn--ghost:hover { color: var(--c-bg); }
-.btn .arrow { transition: transform 0.4s var(--ease); }
+.btn--ghost { background: transparent; color: var(--c-ink); border-color: color-mix(in srgb, var(--c-ink) 28%, transparent); }
+.btn--ghost:hover { background: var(--c-ink); border-color: var(--c-ink); color: #fff; transform: translateY(-2px); box-shadow: 0 14px 30px -14px rgba(0,0,0,0.4); }
+.btn .arrow { transition: transform 0.35s var(--ease); }
 .btn:hover .arrow { transform: translateX(4px); }
 
 .link-underline {
