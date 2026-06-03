@@ -1,0 +1,15 @@
+# Tooling / local
+.claude/
+.imgtmp/
+.imgtmp2/
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# temp build artifacts
+_*.html
+_*.css
+_*.mjs
